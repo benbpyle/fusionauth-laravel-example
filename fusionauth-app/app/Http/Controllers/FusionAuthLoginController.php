@@ -17,7 +17,6 @@ class FusionAuthLoginController extends Controller
     public function callbackFusionAuth()
     {
         $user = Socialite::driver('fusionauth')->user();
-        /*Log::info(var_dump($user->user));*/
         $user = User::updateOrCreate([
             'fusionauth_id' => $user->id,
         ], [

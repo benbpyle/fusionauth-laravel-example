@@ -12,14 +12,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    public function getFullName()
-    {
-        return "{$this->given_name} {$this->middle_name} {$this->family_name}";
-    }
-
-    //tag::fusionauth[]
-    /**
-     * The attributes that are mass assignable.
+    /* The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
@@ -42,15 +35,6 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      *
-     * "birthdate": "1979-01-28",
-        "email": "ben@pylecloudtech.com",
-        "email_verified": true,
-        "family_name": "Pyle",
-        "given_name": "Benjamen",
-        "middle_name": "B",
-        "sub": "62645533-2e8c-44cb-acfe-732caa202bd0",
-        "tid": "9707f2c7-ff0c-c661-1ea4-d7dda0ba99db",
-        "zoneinfo": "US\/Central"
      */
     protected $hidden = [
         'password',

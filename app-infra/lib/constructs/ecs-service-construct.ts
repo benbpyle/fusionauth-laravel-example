@@ -44,16 +44,11 @@ export class EcsServiceConstruct extends Construct {
         loadBalancer: loadBalancer,
         certificates: [
           ListenerCertificate.fromArn(process.env.CERT_ARN!)
-        ]
-      }
+        ],
+        open: true
+      },
     );
 
-    applicationListener.addAction('DefaultAction', {
-      action: ListenerAction.fixedResponse(200, {
-        contentType: 'application/json',
-        messageBody: 'OK',
-      }),
-    });
 
     let localBlueTargetGroup = new ApplicationTargetGroup(
       scope,
@@ -80,6 +75,10 @@ export class EcsServiceConstruct extends Construct {
 
     );
     localBlueTargetGroup.addTarget(fargateService);
+
+    applicationListener.addAction('defaultaction', {
+      action: ListenerAction.forward([localBlueTargetGroup])
+    });
   }
 
   constructor(scope: Construct, id: string, props: EcsServiceConstructProps) {
