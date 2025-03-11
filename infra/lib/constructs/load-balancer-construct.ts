@@ -41,6 +41,11 @@ export class LoadBalancerConstruct extends Construct {
       Port.tcp(80),
       'HTTP Traffic',
       false);
+    securityGroup.addIngressRule(
+      Peer.anyIpv4(),
+      Port.tcp(443),
+      'HTTP Traffic',
+      false);
 
     this._loadBalancer = new ApplicationLoadBalancer(
       scope,

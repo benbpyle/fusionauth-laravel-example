@@ -1,0 +1,147 @@
+{
+  "acknowledged-issue-numbers": [
+    32775,
+    32775
+  ],
+  "ssm:account=252703795646:parameterName=/core-infra/vpc-name:region=us-west-2": "CustomVpc",
+  "ssm:account=252703795646:parameterName=/core-infra/alb-security-group-id:region=us-west-2": "sg-00bd6cfd9124680d5",
+  "ssm:account=252703795646:parameterName=/core-infra/alb-arn:region=us-west-2": "arn:aws:elasticloadbalancing:us-west-2:252703795646:loadbalancer/app/sample-cluster-alb/b6a758c5bf4d21cc",
+  "vpc-provider:account=252703795646:filter.tag:Name=CustomVpc:region=us-west-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0f9be714335e81c7e",
+    "vpcCidrBlock": "10.0.0.0/16",
+    "ownerAccountId": "252703795646",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "custom-vpc-isolated-subnet",
+        "type": "Isolated",
+        "subnets": [
+          {
+            "subnetId": "subnet-0e847283173df7c30",
+            "cidr": "10.0.0.64/28",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-095761bd8950bef57"
+          },
+          {
+            "subnetId": "subnet-0b9b05dbbbd119f71",
+            "cidr": "10.0.0.80/28",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-01f0da538355d8f4d"
+          }
+        ]
+      },
+      {
+        "name": "custom-vpc-public-subnet",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0d929fdec8dfb67cd",
+            "cidr": "10.0.0.0/28",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-047b5e99dfb49c07a"
+          },
+          {
+            "subnetId": "subnet-0a8b8557b37b4e665",
+            "cidr": "10.0.0.16/28",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-0bd7244c987adef20"
+          }
+        ]
+      },
+      {
+        "name": "custom-vpc-private-subnet",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-07f7efb8a455d26b4",
+            "cidr": "10.0.0.32/28",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-03fa87a789f04e274"
+          },
+          {
+            "subnetId": "subnet-0e07fd86aa185f65a",
+            "cidr": "10.0.0.48/28",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-0532019de11080c28"
+          }
+        ]
+      }
+    ]
+  },
+  "security-group:account=252703795646:region=us-west-2:securityGroupId=sg-00bd6cfd9124680d5": {
+    "securityGroupId": "sg-00bd6cfd9124680d5",
+    "allowAllOutbound": false
+  },
+  "load-balancer:account=252703795646:loadBalancerArn=arn$:aws$:elasticloadbalancing$:us-west-2$:252703795646$:loadbalancer/app/sample-cluster-alb/b6a758c5bf4d21cc:loadBalancerType=application:region=us-west-2": {
+    "loadBalancerArn": "arn:aws:elasticloadbalancing:us-west-2:252703795646:loadbalancer/app/sample-cluster-alb/b6a758c5bf4d21cc",
+    "loadBalancerCanonicalHostedZoneId": "Z1H1FL5HABSF5",
+    "loadBalancerDnsName": "sample-cluster-alb-277167916.us-west-2.elb.amazonaws.com",
+    "vpcId": "vpc-0f9be714335e81c7e",
+    "securityGroupIds": [
+      "sg-00bd6cfd9124680d5"
+    ],
+    "ipAddressType": "ipv4"
+  },
+  "vpc-provider:account=252703795646:filter.vpc-id=vpc-0f9be714335e81c7e:region=us-west-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0f9be714335e81c7e",
+    "vpcCidrBlock": "10.0.0.0/16",
+    "ownerAccountId": "252703795646",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "custom-vpc-isolated-subnet",
+        "type": "Isolated",
+        "subnets": [
+          {
+            "subnetId": "subnet-0e847283173df7c30",
+            "cidr": "10.0.0.64/28",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-095761bd8950bef57"
+          },
+          {
+            "subnetId": "subnet-0b9b05dbbbd119f71",
+            "cidr": "10.0.0.80/28",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-01f0da538355d8f4d"
+          }
+        ]
+      },
+      {
+        "name": "custom-vpc-public-subnet",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0d929fdec8dfb67cd",
+            "cidr": "10.0.0.0/28",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-047b5e99dfb49c07a"
+          },
+          {
+            "subnetId": "subnet-0a8b8557b37b4e665",
+            "cidr": "10.0.0.16/28",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-0bd7244c987adef20"
+          }
+        ]
+      },
+      {
+        "name": "custom-vpc-private-subnet",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-07f7efb8a455d26b4",
+            "cidr": "10.0.0.32/28",
+            "availabilityZone": "us-west-2a",
+            "routeTableId": "rtb-03fa87a789f04e274"
+          },
+          {
+            "subnetId": "subnet-0e07fd86aa185f65a",
+            "cidr": "10.0.0.48/28",
+            "availabilityZone": "us-west-2b",
+            "routeTableId": "rtb-0532019de11080c28"
+          }
+        ]
+      }
+    ]
+  }
+}
