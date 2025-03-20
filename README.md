@@ -16,3 +16,11 @@ This repository is divided into 3 parts delineated by the directories that each 
     - fusionauth-app # the PHP Laravel application
     - infra # base level infrastructure in AWS CDK. Cluster setup, network and VPC definitions
 ```
+
+### Project Requirements
+
+- An AWS Account
+- PHP installed
+  - Laravel including Socialite
+- A FusionAuth Cloud Account
+- TypeScript and the AWS CDKå¡
