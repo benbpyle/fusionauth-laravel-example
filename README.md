@@ -1,14 +1,18 @@
-# Welcome to your CDK TypeScript project
+# Come for the Simplicity, Stay for the Extensibility. Identity with FusionAuth 
 
-This is a blank project for CDK development with TypeScript.
+## Description
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This repository is a working example of how to incorporate user Identity with [FusionAuth](https://fusionauth.io/) into a 
+PHP [Laravel](https://laravel.com/) that is deployed on [AWS](https://aws.amazon.com/).
 
-## Useful commands
+There is also an accompanying article published on Laravel News that can be found [here]()
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+### Organization of the Project
+
+This repository is divided into 3 parts delineated by the directories that each piece sits in.
+
+```bash
+    - app-infra # the Laravel application's AWS CDK infrastructure code
+    - fusionauth-app # the PHP Laravel application
+    - infra # base level infrastructure in AWS CDK. Cluster setup, network and VPC definitions
+```
